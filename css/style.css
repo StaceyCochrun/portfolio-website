@@ -8,7 +8,7 @@ Secondary Color (Gray 4): #27241d
 */
 
 body {
-  background-color: #faf9f7
+  background-color: #faf9f7;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -44,20 +44,20 @@ a {
   text-decoration: none; /* No underlining */
 }
 a:hover {
-  color: #31485a;
+  color: #d3cec4;
   text-decoration: underline; /* Underlining when hovering over a link */
 }
 
 a:visited { /* visited link */
-  color: #31485a;
+  color: #ffffff;
 }
 a:active { /* selected link */
-  color: #d3cec4;
+  color: #31485a;
 }
 
 a:hover,
 a:focus {
-  color: #cc6540;
+  color: #d3cec4;
   text-decoration: underline;
 }
 
@@ -79,7 +79,7 @@ a:focus {
 
 
 
-.button {
+.button, button:visited {
   display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
   background-color: #31485a;
   color: #ffffff; /* needed to override the default link color */
