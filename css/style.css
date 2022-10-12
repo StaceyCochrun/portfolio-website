@@ -6,9 +6,11 @@ Secondary Color (Gray 2): #e8e6e1
 Secondary Color (Gray 3): #d3cec4
 Secondary Color (Gray 4): #27241d
 */
+* {
+  box-sizing: border-box;
+}
 
 body {
-  background-color: #faf9f7;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -41,18 +43,24 @@ img {
 
 a {
   color: #31485a;
-  text-decoration: none; /* No underlining */
-}
-a:hover {
-  color: #d3cec4;
-  text-decoration: underline; /* Underlining when hovering over a link */
+  text-decoration: none;
+  /* No underlining */
 }
 
-a:visited { /* visited link */
-  color: #ffffff;
+a:hover {
+  color: #d3cec4;
+  text-decoration: underline;
+  /* Underlining when hovering over a link */
 }
-a:active { /* selected link */
-  color: #31485a;
+
+a:visited {
+  /* visited link */
+  color: #d3cec4;
+}
+
+a:active {
+  /* selected link */
+  color: #faf9f7;
 }
 
 a:hover,
@@ -61,38 +69,134 @@ a:focus {
   text-decoration: underline;
 }
 
-
 .button.contact {
   background-color: transparent;
-  color: #31485a;
+  color: #ffffff;
   text-transform: uppercase;
-  border: 2px solid #31485a;
+  border: 2px solid #d3cec4;
 }
 
 .button.contact:hover {
-  background-color: #31485a;
+  background-color: #d3cec4;
   color: #ffffff;
 }
 
-
-
-
-
-
 .button, button:visited {
-  display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+  display: inline-block;
+  /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
   background-color: #31485a;
-  color: #ffffff; /* needed to override the default link color */
+  color: #ffffff;
+  /* needed to override the default link color */
   font-weight: 700;
   padding: 10px;
   border-radius: 3px;
-  border-bottom: 2px solid #d3cec4; /* width of the border, type, color */
+  border-bottom: 2px solid #d3cec4;
+  /* width of the border, type, color */
   transition: 0.2s opacity;
 }
 
 .button:hover {
-  opacity: 0.8; /* Reduces the opacity of the button to 80% */
+  opacity: 0.8;
+  /* Reduces the opacity of the button to 80% */
   text-decoration: none;
 }
 
-body
+header {
+  background-color: #31485a;
+  text-align: center;
+  padding: 10px 0;
+  margin: 0px;
+  box-shadow: 0px 10px 9px 0px rgba(50, 50, 50, 0.43);
+  position: relative;
+}
+
+/* Layout styling */
+.container {
+  padding: 0 15px;
+}
+
+.row {
+  margin: 25px 0;
+  /* 25px top and bottom, 0 left and right */
+}
+
+#work .row {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #27241d;
+}
+
+#hero h1 {
+  text-align: center;
+  /* Centers text */
+}
+
+.logo {
+  max-width: 250px;
+}
+
+nav>ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav>ul>li {
+  display: inline-block;
+}
+
+nav>ul>li>a {
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #faf9f7;
+}
+
+nav>ul>li>a:visited {
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #d3cec4;
+}
+
+#hero {
+  background-color: #e8e6e1;
+  padding: 20px 0;
+  display: inline-block;
+  width: 100%;
+}
+
+#hero h1 {
+  text-align: center;
+  /* Centers text */
+}
+
+#work h1 {
+  text-align: center;
+  /* Centers text */
+}
+
+#work h2 {
+  text-align: center;
+  /* Centers text */
+}
+
+#footer h2 {
+  text-align: center;
+  /* Centers text */
+}
+
+#footer {
+  background-color: #31485a;
+  padding: 20px 0;
+  display: inline-block;
+  width: 100%;
+}
+
+footer {
+  background-color: #31485a;
+  text-align: center;
+  padding: 10px 0;
+  margin: 0px;
+  box-shadow: 0px 10px 9px 0px rgba(50, 50, 50, 0.43);
+  position: relative;
+  color: #d3cec4
+}
