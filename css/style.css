@@ -74,11 +74,17 @@ a:focus {
   color: #ffffff;
   text-transform: uppercase;
   border: 2px solid #d3cec4;
+  font-weight: 400;
+  transition: 0.2s opacity;
 }
 
 .button.contact:hover {
   background-color: #d3cec4;
   color: #ffffff;
+}
+
+.button:hover {
+  opacity: 0.8;
 }
 
 .button, button:visited {
@@ -92,6 +98,18 @@ a:focus {
   border-radius: 3px;
   border-bottom: 2px solid #d3cec4;
   /* width of the border, type, color */
+  transition: 0.2s opacity;
+}
+
+.button {
+  display: inline-block;
+  background-color: #31485a;
+  color: white;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #d3cec4;
   transition: 0.2s opacity;
 }
 
@@ -121,6 +139,11 @@ header {
 }
 
 #work .row {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #27241d;
+}
+
+#story .row {
   padding-bottom: 25px;
   border-bottom: 1px solid #27241d;
 }
@@ -159,6 +182,7 @@ nav>ul>li>a:visited {
 
 #hero {
   background-color: #e8e6e1;
+  text-align: center;
   padding: 20px 0;
   display: inline-block;
   width: 100%;
@@ -199,4 +223,143 @@ footer {
   box-shadow: 0px 10px 9px 0px rgba(50, 50, 50, 0.43);
   position: relative;
   color: #d3cec4
+}
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  header {
+    text-align: unset;
+    padding: 20px 0px 99px;
+  }
+
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
+
+  body {
+    font-size: 18px;
+    /* the font size for headers will update automatically bc of em values */
+  }
+
+  #hero span {
+    display: block;
+  }
+
+  #story .row {
+    border-bottom: unset;
+    padding: 0;
+  }
+
+  .col-md-6 {
+    width: 50%;
+  }
+
+  [class*="col-md-6"] {
+    float: left;
+    padding: 10px;
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {}
+
+header {
+  text-align: unset;
+  padding: 20px 0px 99px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+}
+
+nav {
+  width: auto;
+  float: right;
+  margin-top: 4px;
+}
+
+body {
+  font-size: 18px;
+  /* the font size for headers will update automatically bc of em values */
+}
+
+#hero span {
+  display: block;
+}
+
+#story .row {
+  border-bottom: unset;
+  padding: 0;
+}
+
+.col-lg-7 {
+  width: 60%;
+}
+
+[class*="col-md-7"] {
+  float: left;
+  padding: 10px;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+
+  50% {
+    fill: #fcffad;
+  }
+
+  100% {
+    fill: #f76414;
+  }
+}
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
 }
