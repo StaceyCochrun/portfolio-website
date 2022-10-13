@@ -225,6 +225,12 @@ footer {
   color: #d3cec4
 }
 
+footer ul { list-style-type: none; }
+
+footer ul li { display: inline-block; }
+
+footer ul li svg { height: 30px; width: 30px; }
+
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
