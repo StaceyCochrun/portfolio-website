@@ -225,11 +225,18 @@ footer {
   color: #d3cec4
 }
 
-footer ul { list-style-type: none; }
+footer ul {
+  list-style-type: none;
+}
 
-footer ul li { display: inline-block; }
+footer ul li {
+  display: inline-block;
+}
 
-footer ul li svg { height: 30px; width: 30px; }
+footer ul li svg {
+  height: 30px;
+  width: 30px;
+}
 
 /* ==============================
 Medium devices (640px and larger)
@@ -237,7 +244,7 @@ Medium devices (640px and larger)
 @media only screen and (min-width: 640px) {
   header {
     text-align: unset;
-    padding: 20px 0px 99px;
+    padding: 20px 0px 13px;
   }
 
   nav {
@@ -279,50 +286,57 @@ Medium devices (640px and larger)
 /* ==============================
 Large devices (1024px or larger)
 ================================= */
-@media only screen and (min-width: 1024px) {}
+@media only screen and (min-width: 1024px) {
+  header {
+    text-align: unset;
+    padding: 20px 0px 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+  }
 
-header {
-  text-align: unset;
-  padding: 20px 0px 99px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
+
+  body {
+    font-size: 18px;
+    /* the font size for headers will update automatically bc of em values */
+  }
+
+  #hero span {
+    display: block;
+  }
+
+  #story .row {
+    border-bottom: unset;
+    padding: 0;
+  }
+
+  .col-lg-7 {
+    width: 60%;
+  }
+
+  .col-lg-5 {
+    width: 40%;
+  }
+
+  [class*="col-md-7"] {
+    float: left;
+    padding: 10px;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-nav {
-  width: auto;
-  float: right;
-  margin-top: 4px;
-}
 
-body {
-  font-size: 18px;
-  /* the font size for headers will update automatically bc of em values */
-}
-
-#hero span {
-  display: block;
-}
-
-#story .row {
-  border-bottom: unset;
-  padding: 0;
-}
-
-.col-lg-7 {
-  width: 60%;
-}
-
-[class*="col-md-7"] {
-  float: left;
-  padding: 10px;
-}
-
-.container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
+/* Cloud Animation */
 
 @keyframes color-change {
   0% {
