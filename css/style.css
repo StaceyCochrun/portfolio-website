@@ -227,6 +227,7 @@ footer {
 
 footer ul {
   list-style-type: none;
+  padding-left: none;
 }
 
 footer ul li {
