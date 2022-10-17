@@ -121,8 +121,7 @@ a:focus {
 
 header {
   background-color: #31485a;
-  text-align: center;
-  padding: 10px 0;
+  padding: 10px 0 4px;
   margin: 0px;
   box-shadow: 0px 10px 9px 0px rgba(50, 50, 50, 0.43);
   position: relative;
@@ -154,16 +153,13 @@ header {
 }
 
 .logo {
-  max-width: 250px;
+  max-width: 150px;
 }
 
 nav>ul {
   list-style-type: none;
   padding: 0;
-}
-
-nav>ul>li {
-  display: inline-block;
+  margin: 0px;
 }
 
 nav>ul>li>a {
@@ -239,6 +235,39 @@ footer ul li svg {
   width: 30px;
 }
 
+.icon {
+}
+
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+  padding-right: 0;
+}
+
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+
+.navtoggle.responsive li  {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(250,249,230,0.5);
+}
+
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
+}
+
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
@@ -248,10 +277,22 @@ Medium devices (640px and larger)
     padding: 20px 0px 13px;
   }
 
+  .logo {
+    min-width: 641px;
+  }
+
   nav {
     width: auto;
     float: right;
     margin-top: 4px;
+  }
+
+  nav > ul {
+  margin: 1em 0;
+}
+
+  nav>ul>li {
+    display: inline-block;
   }
 
   body {
@@ -282,6 +323,16 @@ Medium devices (640px and larger)
     clear: both;
     display: table;
   }
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+
+  .navtoggle li:last-child {
+  display: none;
+  }
+
+
 }
 
 /* ==============================
@@ -294,6 +345,10 @@ Large devices (1024px or larger)
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
+  }
+
+  .logo {
+    min-width: 641px;
   }
 
   nav {
