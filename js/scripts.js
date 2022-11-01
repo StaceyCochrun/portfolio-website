@@ -1,7 +1,4 @@
-console.log("Hi! Welcome to My Portfolio Site")
-
-function menuToggle() {
-}
+console.log("Hi! Welcome to My Portfolio Site");
 
 function menuToggle() {
   var x = document.getElementById('myNavtoggle');
